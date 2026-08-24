@@ -6,10 +6,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
+    <script src="js/script.js" defer></script>
 
     <title>portfolio</title>
 </head>
 <body>
-    <h1 class="white handjet-bold center portfoliotext">my portfolio</h1>
-    <img src="img/pfp.avif" alt="profile picture" class="centerpfp">
+    <div class="hero">
+        <h1 class="white handjet-bold portfoliotext">my portfolio</h1>
+        <img src="img/pfp.webp" alt="profile picture" class="centerpfp">
+        <h1 class="white handjet-bold portfoliotext">about me</h1>
+        <p class="white aboutmetext">hi! my name is inspitt, I mainly design websites <br>and create some side projects along the way</p>
+    </div>
+
+    <button class="web-toggle" type="button" aria-expanded="false" aria-controls="project-web">projects</button>
+
+    <aside class="project-web" id="project-web" aria-label="Featured projects">
+        <div class="web-center">Portfolio</div>
+        <button class="project-node node-1" type="button" data-title="3D rendering engine" data-tag="C++ and 3D" data-text="A bland 3d rendering engine I built, only available on this page (free use)." data-download-url="downloads/Release.zip">3D</button>
+        <button class="project-node node-2" type="button" data-title="The forge" data-tag="irl projects" data-text="The forge is a work in progress project with the sole purpose of helping me build stuff in real life, for which i am using a version of Mark XXXV on github (cool project search it up) and my 3d printer, along with some electronics">F</button>
+        <button class="project-node node-3" type="button" data-title="Web Design" data-tag="Web design" data-text="I have been dabbling in web design for a while now, and one of the projects is the one you're looking at right now, but theres more (on the left side of the page for example)">W3b</button>
+        <button class="project-node node-4" type="button" data-tag="Serverside" data-title="Serverside" data-text="Alongside my irl projects and my web design i am actively working on a webserver for open file storage, alongside an API server for a game revival im working on.">Srv</button>
+    </aside>
+
+    <div class="project-modal" aria-hidden="true">
+        <div class="modal-card" role="dialog" aria-modal="true" aria-label="Project information">
+            <button class="modal-close" type="button" aria-label="Close project details">×</button>
+            <span class="modal-tag" id="modal-tag">projects</span>
+            <h3 id="modal-title">Dont touch this it breaks everything if you do</h3>
+            <p id="modal-text">DONT TOUCH</p>
+        </div>
+    </div>
 </body>

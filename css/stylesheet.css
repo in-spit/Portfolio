@@ -2,10 +2,11 @@ html, body {
     margin: 0;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
+    position: relative;
     background-image: url("../img/images.steamusercontent.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,6 +17,15 @@ body {
     justify-content: flex-start;
     padding-top: 40px;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .white {
@@ -41,4 +51,225 @@ body {
     width: 60%;
     height: auto;
     border-radius: 50%;
+}
+
+.aboutmetext {
+    text-align: center;
+    margin-top: 0;
+    line-height: 1.6;
+}
+
+.web-toggle {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 30;
+    width: 78px;
+    height: 78px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.95);
+    font-family: "Handjet", sans-serif;
+    font-size: 22px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+    opacity: 0.8;
+}
+
+.web-toggle:hover {
+    transform: scale(1.06);
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.project-web {
+    position: fixed;
+    top: 18px;
+    right: 14px;
+    width: 420px;
+    height: 420px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(100%, -12%) rotate(10deg) scale(0.8);
+    transition: transform 0.7s cubic-bezier(0.18, 1, 0.2, 1), opacity 0.2s ease;
+    z-index: 20;
+}
+
+.project-web.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+}
+
+.project-web::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.42)' stroke-width='2'%3E%3Cpolygon points='250,20 350,80 480,250 350,420 250,480 150,420 20,250 150,80' /%3E%3Cpolygon points='250,60 335,105 430,250 335,395 250,440 165,395 70,250 165,105' /%3E%3Cpolygon points='250,120 310,150 370,250 310,350 250,380 190,350 130,250 190,150' /%3E%3Cpolygon points='250,180 277,205 312,250 277,295 250,320 223,295 188,250 223,205' /%3E%3Cpath d='M250 20 L250 480 M20 250 L480 250 M150 80 L350 420 M350 80 L150 420 M80 150 L420 350 M420 150 L80 350 M250 20 L150 420 M250 20 L350 420 M250 480 L150 80 M250 480 L350 80 M20 250 L350 80 M20 250 L350 420 M480 250 L150 80 M480 250 L150 420' /%3E%3C/g%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.45s ease;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.12));
+}
+
+.project-web.is-open::before {
+    opacity: 1;
+}
+
+.web-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    background: rgba(14, 18, 26, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Handjet", sans-serif;
+    font-size: 20px;
+    z-index: 2;
+}
+
+.project-node {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(18, 20, 32, 0.5);
+    color: white;
+    font-family: "Handjet", sans-serif;
+    font-size: 22px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7) rotate(8deg);
+    transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.2s ease;
+    box-shadow: none;
+}
+
+.project-web.is-open .project-node {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+}
+
+.project-node:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.28);
+}
+
+.node-1 {
+    left: 58%;
+    top: 28%;
+}
+
+.node-2 {
+    left: 76%;
+    top: 50%;
+}
+
+.node-3 {
+    left: 62%;
+    top: 76%;
+}
+
+.node-4 {
+    left: 32%;
+    top: 60%;
+}
+
+.project-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 50;
+}
+
+.project-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    width: min(90vw, 340px);
+    background: rgba(18, 20, 30, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    color: white;
+    padding: 18px 18px 16px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-tag {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#modal-title {
+    margin: 0 0 10px;
+    font-family: "Handjet", sans-serif;
+    font-size: 30px;
+}
+
+#modal-text {
+    margin: 0;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.84);
+}
+
+#modal-text a {
+    color: #ff5a5a;
+    text-decoration: underline;
+}
+
+#modal-text a:hover {
+    color: #ff7b7b;
+}
+
+@media (max-width: 700px) {
+    .project-web {
+        width: 300px;
+        height: 300px;
+        right: 8px;
+    }
+
+    .web-toggle {
+        width: 68px;
+        height: 68px;
+        font-size: 18px;
+    }
 }
