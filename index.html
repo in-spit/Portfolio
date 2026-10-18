@@ -1,84 +1,180 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg+xml" href="img/ico.svg">
-    <link rel="stylesheet" href="css/stylesheet.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap" rel="stylesheet">
-    <script src="js/script.js" defer></script>
-
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="inspitt.xyz">
-    <meta property="og:title" content="inspitt | portfolio">
-    <meta property="og:description" content="Hi! My name is inspitt. I mainly design websites and create some side projects along the way.">
-    <meta property="og:url" content="https://inspitt.xyz">
-    
-    <meta property="og:image" content="https://inspitt.xyzimg/pfp.png">
-    
-    <meta name="theme-color" content="#ff2a2a">
-
-    <title>portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0c171c">
+  <title>Nate / in-spit — Systems over categories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="s/st1.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="hero">
-        <h1 class="white handjet-bold portfoliotext">my portfolio</h1>
-        <img src="img/pfp.webp" alt="profile picture" class="centerpfp">
-        <h1 class="white handjet-bold portfoliotext">about me</h1>
-        <p class="white aboutmetext">hi! my name is inspitt, I mainly design websites <br>and create some side projects along the way</p>
+  <div id="fiw-site">
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="in-spit home">
+        <span class="brand-icon">&gt;_</span>
+        <span>in-spit</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">ABOUT</a>
+        <a href="#work">WORK</a>
+        <a href="#stack">WORKSHOP</a>
+        <a href="#commissions">HELP</a>
+        <a href="#contact">CONTACT</a>
+        <a class="github" href="https://github.com/in-spit" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+      </nav>
+    </header>
 
-        <div class="icon-row" aria-label="Project icons">
-            <a href="https://steamcommunity.com/id/inspitt" target="_blank" rel="noreferrer" aria-label="Steam" class="icon-link"><img src="https://cdn.simpleicons.org/steam/ffffff" alt="Steam logo" class="mini-icon"></a>
-            <a href="https://discord.gg/ecpZqNqytT" target="_blank" rel="noreferrer" aria-label="Discord" class="icon-link"><img src="https://cdn.simpleicons.org/discord/ffffff" alt="Discord logo" class="mini-icon"></a>
-            <a href="https://github.com/in-spit" target="_blank" rel="noreferrer" aria-label="GitHub" class="icon-link"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub logo" class="mini-icon"></a>
-            <a href="https://www.youtube.com/@inspitt" target="_blank" rel="noreferrer" aria-label="YouTube" class="icon-link"><img src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube logo" class="mini-icon"></a>
-            <a href="https://open.spotify.com/user/dk44injphd1k1ei2j9l1392yz?si=4de0dddf890d4f06&nd=1&dlsi=c1f4bbc462594664" target="_blank" rel="noreferrer" aria-label="Spotify" class="icon-link"><img src="https://cdn.simpleicons.org/spotify/ffffff" alt="Spotify logo" class="mini-icon"></a>
+    <main>
+      <section class="hero" id="home">
+        <canvas id="ascii-bg" aria-hidden="true"></canvas>
+        <div class="hero-left">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            <span>NATE@INSP:~$</span>
+            <span>CAT ABOUT.TXT</span>
+          </div>
+          <h1><span class="first">Nate</span><span class="second">/ IN-SPIT</span></h1>
+          <p class="intro">
+            I build desktops, I do web design, some apps, and the
+            infrastructure to run them. Most of my projects start as something
+            <strong>I wanted for my own machine or server.</strong>
+            I like to understand how things work, and I like to build things that work the way I want them to.
+          </p>
+          <div class="actions">
+            <a class="action primary" href="https://github.com/in-spit" target="_blank" rel="noopener noreferrer">WHAT I'M BUILDING ↘</a>
+            <a class="action" href="#stack">MY TOOLKIT ↗</a>
+          </div>
+          <div class="icon-row" aria-label="Social links">
+            <a href="https://steamcommunity.com/id/inspitt" target="_blank" rel="noopener noreferrer" aria-label="Steam" class="icon-link"><img src="https://cdn.simpleicons.org/steam/ffffff" alt="" class="mini-icon"></a>
+            <a href="https://discord.gg/ecpZqNqytT" target="_blank" rel="noopener noreferrer" aria-label="Discord" class="icon-link"><img src="https://cdn.simpleicons.org/discord/ffffff" alt="" class="mini-icon"></a>
+            <a href="https://github.com/in-spit" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="icon-link"><img src="https://cdn.simpleicons.org/github/ffffff" alt="" class="mini-icon"></a>
+            <a href="https://www.youtube.com/@inspitt" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="icon-link"><img src="https://cdn.simpleicons.org/youtube/ffffff" alt="" class="mini-icon"></a>
+            <a href="https://open.spotify.com/user/dk44injphd1k1ei2j9l1392yz?si=4de0dddf890d4f06&nd=1&dlsi=c1f4bbc462594664" target="_blank" rel="noopener noreferrer" aria-label="Spotify" class="icon-link"><img src="https://cdn.simpleicons.org/spotify/ffffff" alt="" class="mini-icon"></a>
+          </div>
         </div>
-    </div>
 
-    <button class="design-toggle" type="button" aria-expanded="false" aria-controls="design-list">web</button>
-    <button class="web-toggle" type="button" aria-expanded="false" aria-controls="project-web">projects</button>
+        <div class="hero-right">
+          <div class="terminal-wrap">
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="path">~/Root</span>
+                <span>LOCAL</span>
+              </div>
+              <div class="terminal-section">
+                <div><span class="command">$</span> git status --short</div>
+                <pre class="output"><span class="command">M</span> Jetbrains IDE/
+<span class="command">M</span> VSCode/
+<span class="command">M</span> Nano/</pre>
+              </div>
+              <div class="terminal-section">
+                <div><span class="command">$</span> cat NOTES</div>
+                <pre class="output">My current stack: linux /</pre>
+              </div>
+            </div>
+          </div>
 
-    <aside class="design-list" id="design-list" aria-label="Web design endeavours">
-        <div class="design-list-header">web design</div>
-        <ul class="design-list-items">
-            <li>
-                <a href="https://portfolio.inspitt.nl" target="_blank" rel="noreferrer" class="design-item-card">
-                    <span class="design-item-label">portfolio redesign (you are here)</span>
-                    <img class="design-preview" src="img/portfoliopreview.png" alt="Portfolio redesign preview">
-                </a>
-            </li>
-            <li>
-                <a href="https://nullsec.inspitt.nl" target="_blank" rel="noreferrer" class="design-item-card">
-                    <span class="design-item-label">Nullsec pure design page</span>
-                    <img class="design-preview" src="img/nullsecpreview.png" alt="Landing page preview">
-                </a>
-            </li>
-            <li>
-                <a href="https://nebnet.inspitt.nl" target="_blank" rel="noreferrer" class="design-item-card">
-                    <span class="design-item-label">Nebulon Net (unifinished)</span>
-                    <img class="design-preview" src="img/nebnetpreview.png" alt="Nebulon Net experiment preview">
-                </a>
-            </li>
-        </ul>
-    </aside>
-
-    <aside class="project-web" id="project-web" aria-label="Featured projects">
-        <div class="web-center">Portfolio</div>
-        <button class="project-node node-1" type="button" data-title="3D rendering engine" data-tag="C++ and 3D" data-text="A bland 3d rendering engine I built, only available on this page (free use)." data-download-url="downloads/Release.zip">3D</button>
-        <button class="project-node node-2" type="button" data-title="The forge" data-tag="irl projects" data-text="The forge is a work in progress project with the sole purpose of helping me build stuff in real life, for which i am using a version of Mark XXXV on github (cool project search it up) and my 3d printer, along with some electronics">F</button>
-        <button class="project-node node-3" type="button" data-title="Web Design" data-tag="Web design" data-text="I have been dabbling in web design for a while now, and one of the projects is the one you're looking at right now, but theres more (on the left side of the page for example)">W3b</button>
-        <button class="project-node node-4" type="button" data-tag="Serverside" data-title="Serverside" data-text="Alongside my irl projects and my web design i am actively working on a webserver for open file storage, alongside an API server for a game revival im working on.">Srv</button>
-    </aside>
-
-    <div class="project-modal" aria-hidden="true">
-        <div class="modal-card" role="dialog" aria-modal="true" aria-label="Project information">
-            <button class="modal-close" type="button" aria-label="Close project details">×</button>
-            <span class="modal-tag" id="modal-tag">projects</span>
-            <h3 id="modal-title">Dont touch this it breaks everything if you do</h3>
-            <p id="modal-text">DONT TOUCH</p>
+          <div class="profile-card">
+            <div class="avatar"><span aria-hidden="true"><img src="img/pfp.webp" width="100" height="100"></span></div>
+            <div>
+              <div class="profile-name">Nate / IN-SPIT</div>
+              <div class="profile-caption">Basics are beautiful.</div>
+            </div>
+          </div>
         </div>
-    </div>
+      </section>
+
+      <section class="bottom-cards" aria-label="Introduction">
+        <a class="bottom-card" href="#about">
+          <div class="card-number">01</div>
+          <div class="card-title">Arch, straight rolling release</div>
+          <div class="card-desc">Might be unstable.</div>
+        </a>
+        <a class="bottom-card" href="#work">
+          <div class="card-number">02</div>
+          <div class="card-title">UBUNTU ON THE SERVER</div>
+          <div class="card-desc">I might switch to fedora server because JEWbuntu</div>
+        </a>
+        <a class="bottom-card" href="#stack">
+          <div class="card-number">03</div>
+          <div class="card-title">"If it aint broke dont fix it!"</div>
+          <div class="card-desc">Rebuild things. Understand how they work.</div>
+        </a>
+      </section>
+
+      <section class="content-section" id="about">
+        <div class="section-label">01 / ABOUT.TXT</div>
+        <h2>Basics are beautiful.</h2>
+        <p>I think that the entirety of coding is built on what we are learnt at the start, without a foundation, a house will inevitably collapste, that what might seems simple often works best.</p>
+      </section>
+
+      <section class="content-section" id="work">
+        <div class="section-label">02 / PROJECTS</div>
+        <h2>In progress.</h2>
+        <div class="project-grid">
+          <article class="project"><h3>The Forge</h3><p>A series of projects (more on my github) about building up my IRL workshop and skills.<br><a href="https://github.com/in-spit/TheForge" class="projlink">The Forge github</a></p></article>
+          <article class="project"><h3>Cillium</h3><p>A more professional network of projects that help me learn, and contribute to the community.<br><a href="https://github.com/CilliumX" class="projlink">CilliumX github</a></p></article>
+          <article class="project"><h3>Infrastructure</h3><p>The workshop is coming together, I am working on getting everything set up in a way that is accessible and gives me total control.</p></article>
+          <article class="project"><h3>More soon...</h3><p>Always something unfinished. Always something new to learn.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section" id="finished">
+        <div class="section-label">03 / PROJECTS</div>
+        <h2>Finished and exclusive</h2>
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-preview"><img src="../img/portfoliopreview.png" alt="Portfolio redesign preview"></div>
+            <h3>portfolio redesign (you are here)</h3>
+            <p>The portfolio redesign you're viewing now.</p>
+            <a class="projlink" href="https://portfolio.inspitt.nl" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-preview"><img src="../img/nullsecpreview.png" alt="Landing page preview"></div>
+            <h3>Nullsec pure design page</h3>
+            <p>A design-focused landing page for Nullsec.</p>
+            <a class="projlink" href="https://nullsec.inspitt.nl" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a>
+          </article>
+          <article class="project">
+            <div class="project-preview"><img src="../img/nebnetpreview.png" alt="Nebulon Net experiment preview"></div>
+            <h3>Nebulon Net (unfinished)</h3>
+            <p>An unfinished Nebulon Net experiment.</p>
+            <a class="projlink" href="https://nebnet.inspitt.nl" target="_blank" rel="noopener noreferrer">VIEW PROJECT ↗</a>
+          </article>
+          <article class="project">
+            <h3>3D Rendering Engine</h3>
+            <p>A C++ 3D rendering engine I built, available to use for free.</p>
+            <a class="projlink" href="../downloads/Release.zip" download>DOWNLOAD LATEST RELEASE ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="stack">
+        <div class="section-label">04 / TOOLKIT</div>
+        <h2>The Workshop</h2>
+        <p>I currently mainly use Arch linux and some windows 11, I code with Nano, VS Code and Visual Studio Community, When I have a problem I am running into there is a big likelyhood I am trying to build something to fix it for me.</p>
+      </section>
+
+      <section class="content-section" id="commissions">
+        <div class="section-label">05 / COMMISSIONS</div>
+        <h2>Want a helping hand?</h2>
+        <p>I currently do not accept money for my work, though I am always open to collaborating on interesting projects, slide me a DM or find me somewhere on the interwebs.</p>
+      </section>
+
+      <section class="content-section" id="contact">
+        <div class="section-label">06 / CONTACT</div>
+        <h2>Let's build something.</h2>
+        <p>Find me on GitHub or slide an email (i dont read those mostly)</p>
+        <div class="actions">
+          <a class="action primary" href="https://github.com/in-spit" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+          <a class="action" href="mailto:inspirity5797@gmail.com">SEND AN EMAIL ↗</a>
+        </div>
+      </section>
+    </main>
+
+  </div>
 </body>
+</html>
